@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App Locker Admin</title>
+  </head>
+  <body>
+    <h1>Configurer les apps autorisées</h1>
+    <form method="post">
+      <label>Applications autorisées (une par ligne - nom du package) :</label
+      ><br />
+      <textarea name="allowed_apps" rows="8" cols="50">
+{{ '\n'.join(config.allowed_apps) }}</textarea
+      ><br /><br />
+      <label>Mot de passe :</label><br />
+      <input
+        type="text"
+        name="password"
+        value="{{ config.password }}"
+      /><br /><br />
+      <button type="submit">Enregistrer</button>
+    </form>
+  </body>
+</html>
